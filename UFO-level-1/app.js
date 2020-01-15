@@ -29,17 +29,20 @@ button.on("click", function() {
   var comments = data_filter.map(dates => dates.comments);
   console.log(state);
    // Then, select the class
-  var inputs = d3.select("tbody");
+  var inputs = d3.select(".table-striped");
 
    // remove any  
   inputs.html("");
 
    // append data to the table
-   inputs.append("td").text(datetime);
-   inputs.append("td").text(city);
-   inputs.append("td").text(state);
-   inputs.append("td").text(country);
-   inputs.append("td").text(shape);
-   inputs.append("td").text(durationMinutes);
-   inputs.append("td").text(comments);
+   for (var i = 0; i < 12; i++) {
+    inputs.append("tr");
+    inputs.append("td").text(datetime[i]);
+    inputs.append("td").text(city[i]);
+    inputs.append("td").text(state[i]);
+    inputs.append("td").text(country[i]);
+    inputs.append("td").text(shape[i]);
+    inputs.append("td").text(durationMinutes[i]);
+    inputs.append("td").text(comments[i]);
+   }
 });

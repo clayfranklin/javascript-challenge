@@ -20,23 +20,26 @@ button.on("click", function() {
   console.log(data_filter)
   ;
 
-// //   First, create an array with just the age values
-  var just_city = data_filter.map(dates => dates);
-
-   var datetime = just_city[0]
-   var city = just_city[1]
+  var datetime = data_filter.map(dates => dates.datetime);
+  var city = data_filter.map(dates => dates.city);
+  var state = data_filter.map(dates => dates.state);
+  var country = data_filter.map(dates => dates.country);
+  var shape = data_filter.map(dates => dates.shape);
+  var durationMinutes = data_filter.map(dates => dates.durationMinutes);
+  var comments = data_filter.map(dates => dates.comments);
+  console.log(state);
    // Then, select the class
-   var inputs = d3.select(".table-striped");
+  var inputs = d3.select("tbody");
 
    // remove any  
-   inputs.html("");
+  inputs.html("");
 
    // append data to the table
-   inputs.append("td").text(`${datetime}`);
-   inputs.append("td").text(` ${city}`);
-//    inputs.append("td").text(` ${state}`);
-//    inputs.append("td").text(` ${country}`);
-//    inputs.append("td").text(`${shape}`);
-//    inputs.append("td").text(`${durationMinutes}`);
-//    inputs.append("td").text(`${comments}`);
+   inputs.append("td").text(datetime);
+   inputs.append("td").text(city);
+   inputs.append("td").text(state);
+   inputs.append("td").text(country);
+   inputs.append("td").text(shape);
+   inputs.append("td").text(durationMinutes);
+   inputs.append("td").text(comments);
 });

@@ -35,7 +35,7 @@ button.on("click", function() {
   inputs.html("");
 
    // append data to the table
-   for (var i = 0; i < 12; i++) {
+   for (var i = 0; i < 100; i++) {
     inputs.append("tr");
     inputs.append("td").text(datetime[i]);
     inputs.append("td").text(city[i]);

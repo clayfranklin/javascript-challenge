@@ -2,4 +2,4 @@
 
 
 
-![Testing Data in TN](https://github.com/clayfranklin/Coronavirus/blob/master/Covid_predictions/TN/Resources/Testing_Data.png)
+![javascript img](https://github.com/clayfranklin/javascript-challenge/blob/master/UFO-level-1/JS_data_table_pull_down.png)
